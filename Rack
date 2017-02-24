@@ -1,0 +1,24 @@
+Rack:
+               A node is generally a computer. It is a commodity hardware used to contain(store) data. A collection or storage of nodes
+is called as a Rack. 
+            A rack is generally a collection of 30 to 40 nodes. They are physically stored close together. They are interconnected to the same
+network switch. 
+
+    The concept of the network bandwidth between can be explained with a small logic given below:
+    
+            (Network bandwidth between 2 nodes in the same rack) > (Network bandwidth between 2 nodes in different racks)
+      
+      The above statement says that the Network bandwidth between two different nodes of the same rack is much greater than the  
+network bandwidth of two nodes of different racks. 
+
+Rack awareness: (Conceptual understanding):
+              There is a concept in Hadoop called as Rack awareness which as an administrator we need to know. We can manually define the rack number
+of each slave Data Node in your cluster. 
+              
+              We need to do this for two major reasons: Data loss prevention and Network performance. Assume we laod data into the cluster 
+for processing. We have three copies of file that is being done by the system to prevent the failure of one machine from losing all copies of data.
+It would sound awkward to lose all the valuable information. To avoid this the Name node will now where Data Nodes are located in the network technology and use that 
+info to make an intelligent decision about where data replicas should exist in the cluster.   
+
+        The major reason for having a rack in the hadoop system is to easily store and process data with a knowledge of where the data is 
+        being stored and processed. It helps in future to track the functions performed during processing of data. 
